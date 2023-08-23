@@ -1,0 +1,215 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(61, 28, 28);
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav h1 {
+  margin: 1.5rem 0;
+  cursor: pointer; /* Menambahkan cursor pointer agar menunjukkan bisa diklik */
+  padding-right: 680px;
+}
+
+nav h1 span {
+  transition: color 0.3s ease; /* Animasi ganti warna */
+}
+
+nav h1:hover span {
+  color: orange; /* Warna yang akan ditampilkan saat dihover */
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 1.5rem 10px;
+  border-bottom: 2px solid transparent; /* Menambahkan garis bawah dengan ketebalan 2px */
+  transition: border-color 0.3s ease; /* Animasi perubahan warna garis */
+}
+
+nav a:hover {
+  border-bottom-color: orange; /* Warna garis akan berubah menjadi oranye saat dihover */
+}
+
+nav .right-links {
+  display: flex;
+  align-items: center;
+}
+
+nav .right-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+.home {
+  width: 100%;
+  height: 60vh;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.home img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #3e1616;
+}
+.menu-article {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px; /* Sesuaikan dengan lebar maksimum yang Anda inginkan */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+  flex: 1;
+  min-width: 250px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+/* Tambahkan ini ke dalam styles.css atau dalam tag <style> di dalam <head> */
+
+/* ... */
+
+.profile {
+  position: fixed;
+  top: 100%;
+  right: 20px;
+  transform: translateY(-100%);
+  width: 300px;
+  background-color: #8b5a2b;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* ... */
+
+.profile p {
+  margin: 10px 0;
+}
+
+/* Muncul saat di-scroll */
+.profile.show {
+  transform: translateY(0);
+}
+
+footer {
+  background-color: rgb(61, 28, 28);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+/* styles.css */
+.social-icons {
+  display: flex;
+  gap: 10px; /* Jarak antara ikon-ikon */
+  justify-content: center; /* Pusatkan ikon-ikon */
+  align-items: center;
+}
+
+.social-icons img {
+  width: 24px; /* Ukuran ikon */
+  height: 24px;
+}
+
+/* Tambahan jika Anda ingin menambahkan efek hover pada ikon */
+.social-icons a:hover img {
+  transform: scale(1.1); /* Efek perbesaran saat dihover */
+}
+
+/* Tambahkan CSS media query untuk membuat tampilan responsif */
+
+/* Tampilan tablet (ukuran hingga 768px) */
+@media (max-width: 768px) {
+  nav h1 {
+    padding-right: 20px; /* Kurangi padding agar judul tidak terlalu panjang */
+  }
+  nav {
+    flex-direction: column; /* Atur tata letak navbar menjadi vertikal */
+    align-items: flex-start; /* Geser tautan ke kiri */
+    padding: 20px 0; /* Atur padding vertikal pada navbar */
+  }
+  nav a {
+    margin: 10px 0; /* Berikan ruang antara tautan */
+  }
+  .slider,
+  .home img {
+    height: auto; /* Sesuaikan tinggi gambar agar tidak terlalu besar */
+  }
+}
+
+/* Tampilan smartphone (ukuran hingga 576px) */
+@media (max-width: 576px) {
+  nav h1 {
+    font-size: 1.5rem; /* Perkecil ukuran font judul */
+    padding-right: 10px; /* Kurangi padding lagi */
+  }
+  nav a {
+    margin: 1rem 5px; /* Perkecil margin pada tautan */
+  }
+  .home img {
+    height: 50vh; /* Kurangi tinggi gambar pada halaman beranda */
+  }
+  .menu-article {
+    max-width: 100%; /* Gunakan lebar penuh pada artikel */
+  }
+  .card {
+    min-width: auto; /* Sesuaikan lebar kartu pada perangkat kecil */
+  }
+  .profile {
+    width: 100%; /* Gunakan lebar penuh pada elemen aside */
+    right: 0;
+  }
+}
